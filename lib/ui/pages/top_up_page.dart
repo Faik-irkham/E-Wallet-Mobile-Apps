@@ -10,7 +10,7 @@ class TopupPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Top Up'),
+        title: const Text('Top Up'),
       ),
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 24),
