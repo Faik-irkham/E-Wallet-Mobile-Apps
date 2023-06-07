@@ -1,6 +1,7 @@
 import 'package:bank_sha/shared/theme.dart';
 import 'package:bank_sha/ui/widgets/buttons.dart';
 import 'package:flutter/material.dart';
+// ignore: unused_import
 import 'package:intl/intl.dart';
 import 'package:url_launcher/url_launcher.dart';
 
