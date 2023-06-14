@@ -49,6 +49,12 @@
 	<true/>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>this app requires access to the photo library</string>
+	<key>NSCameraUsageDescription</key>
+	<string>this app requires access to the camera</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>this app requires access to the microphone</string>
   <string>https</string>
   <string>http</string>
 </array>
