@@ -130,7 +130,12 @@ class _SignUpSetProfilePageState extends State<SignUpSetProfilePage> {
                               pin: pinController.text,
                               profilePicture: selectedImage == null
                                   ? null
-                                  : 'data:image/png;base64,${base64Encode(File(selectedImage!.path).readAsBytesSync())}',
+                                  // ignore: prefer_interpolation_to_compose_strings
+                                  : 'data:image/png;base64,' +
+                                      (base64Encode(
+                                        File(selectedImage!.path)
+                                            .readAsBytesSync(),
+                                      )),
                             ),
                           ),
                         ),

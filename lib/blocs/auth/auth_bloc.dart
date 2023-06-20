@@ -1,5 +1,7 @@
 import 'package:bank_sha/models/sign_up_form_model.dart';
+import 'package:bank_sha/models/user_model.dart';
 import 'package:bank_sha/services/auth_service.dart';
+// ignore: depend_on_referenced_packages
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 
@@ -20,6 +22,18 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           } else {
             emit(const AuthFailed('Email sudah terpakai'));
           }
+        } catch (e) {
+          emit(AuthFailed(e.toString()));
+        }
+      }
+
+      if (event is AuthRegister) {
+        try {
+          emit(AuthLoading());
+
+          final user = await AuthService().register(event.data);
+
+          emit(AuthSuccess(user));
         } catch (e) {
           emit(AuthFailed(e.toString()));
         }
