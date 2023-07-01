@@ -137,10 +137,10 @@ class _SignUpSetKtpPageState extends State<SignUpSetKtpPage> {
                                         ? null
                                         // ignore: prefer_interpolation_to_compose_strings
                                         : 'data:image/png;base64,' +
-                                            (base64Encode(
+                                            base64Encode(
                                               File(selectedImage!.path)
                                                   .readAsBytesSync(),
-                                            )),
+                                            ),
                                   ),
                                 ),
                               );

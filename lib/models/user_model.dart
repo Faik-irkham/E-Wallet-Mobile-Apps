@@ -26,16 +26,17 @@ class UserModel {
   });
 
   factory UserModel.fromJson(Map<String, dynamic> json) => UserModel(
-      id: json['id'],
-      name: json['name'],
-      email: json['email'],
-      username: json['username'],
-      verified: json['verified'],
-      profilePicture: json['profile_picture'],
-      balance: json['balance'],
-      cardNumber: json['card_number'],
-      pin: json['pin'],
-      token: json['token']);
+        id: json['id'],
+        name: json['name'],
+        email: json['email'],
+        username: json['username'],
+        verified: json['verified'],
+        profilePicture: json['profile_picture'],
+        balance: json['balance'],
+        cardNumber: json['card_number'],
+        pin: json['pin'],
+        token: json['token'],
+      );
 
   UserModel copyWith({
     String? username,
